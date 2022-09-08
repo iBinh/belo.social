@@ -66,7 +66,7 @@ export class Belo {
         }
 
         const isWebPlatform = platform === Platform.DesktopWeb || platform === Platform.MobileWeb;
-        if (isWebPlatform || platform === Platform.iOS) {
+        if (isWebPlatform /*|| platform === Platform.iOS */) {
             let instanceHost = trustedWebInstances[0];
             // we use app.element.io which iOS will intercept, but it likely won't intercept any other trusted instances
             // so only use a preferred web instance for true web links.
