@@ -23,8 +23,8 @@ export class OpenLinkView extends TemplateView {
     render(t, vm) {
         return t.div({className: "OpenLinkView card"}, [
             t.mapView(vm => vm.previewViewModel, previewVM => previewVM ?
-                new ShowLinkView(vm) :
-                new ServerConsentView(vm.serverConsentViewModel)
+                new ShowLinkView(vm) : new ShowLinkView(vm)
+                // new ServerConsentView(vm.serverConsentViewModel)
             ),
         ]);
     }

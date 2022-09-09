@@ -18,8 +18,8 @@ import {Maturity, Platform, LinkKind,
     FDroidLink, AppleStoreLink, PlayStoreLink, WebsiteLink} from "../types.js";
 
 const trustedWebInstances = [
-    "app.belo.chat",
     "web.belo.chat",
+    "app.belo.chat"
 ];
 
 /**
