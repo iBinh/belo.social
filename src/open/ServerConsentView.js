@@ -40,10 +40,10 @@ export class ServerConsentView extends TemplateView {
                     }, "privacy policy"),
                     ")",
                 ]),
-                t.span({className: {hidden: vm => vm.showSelectServer}}, [
-                    ", ",
-                    useAnotherServer,
-                ]),
+                // t.span({className: {hidden: vm => vm.showSelectServer}}, [
+                //     ", ",
+                //     useAnotherServer,
+                // ]),
                 " or ",
                 continueWithoutPreview,
                 "."

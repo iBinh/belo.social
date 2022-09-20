@@ -31,14 +31,16 @@ export class LoadServerPolicyViewModel extends ViewModel {
         try {
             const homeserver = await resolveServer(this.request, this.server);
             if (homeserver) {
-                const url = await homeserver.getPrivacyPolicyUrl();
-                if (url) {
-                    this.message = `Loading ${this.server} privacy policy now…`;
-                    this.openLink(url);
-                } else {
-                    this.loading = false;
-                    this.message = `${this.server} does not declare a privacy policy.`;
-                }
+                const url = "https://belochat.com/privacy";
+                this.openLink(url);
+                // const url = await homeserver.getPrivacyPolicyUrl();
+                // if (url) {
+                //     this.message = `Loading ${this.server} privacy policy now…`;
+                //     this.openLink(url);
+                // } else {
+                //     this.loading = false;
+                //     this.message = `${this.server} does not declare a privacy policy.`;
+                // }
             } else {
                 this.loading = false;
                 this.message = `${this.server} does not look like a matrix homeserver.`;
